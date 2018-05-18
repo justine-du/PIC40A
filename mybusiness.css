@@ -1,0 +1,180 @@
+html, body, #content h2, #header h1, #sidebar h2, #footer h2,
+#content p, #header p
+{
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: 'Montserrat';
+  font-size: 15pt;
+  text-transform: uppercase;
+  color: #A22A9F
+}
+
+p {
+  font-family: 'Merriweather';
+  font-size: 10pt;
+  color: #402955;
+}
+
+#aboutus h2
+{
+  padding: 15px;
+}
+
+body {
+  background-color: beige;
+}
+
+#main_container
+{
+  background-color: #CAEBF2;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#main_container blockquote
+{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;
+  padding-right: 65px;
+}
+
+#header blockquote p
+{
+  color: #F8EEE7;
+  font-family: 'Montserrat';
+  font-size: 12pt;
+}
+
+#header
+{
+  background-color: #94618E;
+  height: 144px;
+}
+
+h1 {
+  font-family: 'Montserrat';
+  font-size: 35pt;
+  text-transform: uppercase;
+  color: #F8EEE7;
+  text-shadow: 5px 5px #5D2CE0;
+  text-align: center;
+}
+
+p img.hedgehog {
+  float: right;
+  opacity: 0.9;
+}
+
+#navbar {
+  margin: 0;
+  padding: 0;
+  height: 1em;
+}
+
+#navbar li {
+  list-style: none;
+  float: left;
+}
+
+#navbar li a {
+  display: block;
+  padding: 9px 65px;
+  background-color: lightpink;
+  color: #402955;
+  text-decoration: none;
+}
+
+#navbar li ul {
+  display: none;
+  width: 10em;
+  background-color: #69f;
+}
+
+#navbar li:hover ul {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li:hover li {
+  float: none;
+}
+
+#navbar li:hover li a {
+  background-color: lightpink;
+  border-bottom: 1px solid black;
+  color: purple;
+  width: 70px;
+}
+
+#navbar li li a:hover {
+  background-color: #8db3ff;
+}
+
+#content
+{
+  /* background-color: orange; */
+  margin-left: 220px;
+  padding: 0px;
+}
+
+#sidebar
+{
+  background-color: #77C9D4;
+  float: left;
+  width: 200px;
+  height: 920px;
+  padding: 0px;
+}
+
+p img.justine {
+  float: left;
+  padding: 4px 15px 6px 15px;
+  margin: 0;
+}
+
+#footer
+{
+  background-color: #5D2CE0;
+  clear: both;
+  text-align: center;
+  padding: 2px 0px 2px 20px;
+}
+
+table {
+  font-family: 'Merriweather';
+  font-size: 10pt;
+}
+
+li {
+  font-family: 'Merriweather';
+  font-size: 10pt;
+}
+
+address, #footer h2 {
+  color: #FDFDFD;
+}
+
+address {
+  font-family: 'Merriweather';
+  font-size: 8pt;
+}
+
+#table {
+  width: 100%;
+}
+
+th {
+  height: 25px;
+  background-color: darkblue;
+  color: white;
+}
+
+th, td {
+  padding: 6px;
+}

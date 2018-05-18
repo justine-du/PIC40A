@@ -1,0 +1,186 @@
+<?xmlversion = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Order Form</title>
+      <link href = "mybusiness.css" rel = "stylesheet" style = "text/css"/>
+
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'/>
+      <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'/>
+   </head>
+
+   <body>
+
+     <div id = "main_container">
+       <div id = "header">
+         <h1>Justine's&reg; Esthetic Eatery</h1>
+         <blockquote><p>"Fun to eat AND look at!"</p></blockquote>
+       </div>
+
+       <div id = "menu">
+         <ul id = "navbar">
+           <li><a href = "#">Our History&nbsp;</a>
+             <ul>
+               <li><a href = "#">Company Values</a></li>
+               <li><a href = "#">More</a></li>
+            </ul>
+           </li>
+
+           <li><a href = "#">Yummy Goods</a>
+             <ul>
+               <li><a href = "#">About Our Products</a></li>
+             </ul>
+           </li>
+
+           <li><a href = "order2.html">Order Form</a></li>
+
+           <li><a href = "#">FAQ</a>
+             <ul>
+               <li><a href = "#">Contact Us</a></li>
+             </ul>
+           </li>
+
+         </ul>
+       </div>
+
+       <div id = "sidebar">
+         <div id = "aboutus">
+            <h2>&delta; About Us &delta;</h2>
+       	  	<p><img class = "justine" src = "justine.jpg" alt = "Justine's picture" width = "85" height = "100"/>
+            Hello! My name is Justine Du, proud owner of a newly established decorating
+            food company called Justine's&reg; Estehetic Eatery. I am currently attending UCLA as a
+            Cognitive Science major with a Specialization in Computing, and my favorite thing in
+            the world is food and aesthetic-looking stuff. Combining the two, my goal is to bring that
+            same visual and emotional happiness to you!</p>
+            <br/>
+            <img class = "cucumber" src = "cucumber.jpg" alt = "cucumber" width = "200" height = "200"/>
+            <br/><br/><br/>
+          </div>
+       </div>
+
+       <div id = "content">
+         <h2>Order Form</h2>
+         <br/><br/>
+         <form method = "get" action = "">
+         <fieldset>
+           <legend><b>Customer Information</b></legend>
+               <label>
+                 Name: <input type = "text" name = "fullname"/><br/><br/>
+                 Street: <input type = "text" name = "street"/><br/><br/>
+                 City: <input type = "text" name = "city"/><br/><br/>
+                 State: <input type = "text" name = "state"/><br/><br/>
+                 Zipcode: <input type = "text" name = "zip"/><br/><br/>
+                 Email Address: <input type = "text" name = "email"/>
+               </label><br/>
+
+         </fieldset>
+         <p><br/><br/></p>
+         <fieldset>
+           <legend><b>Order Information</b></legend>
+
+
+               <label>How did you hear about us?
+               <input type = "radio" name = "hear" value = "Google"/>Google
+               <input type = "radio" name = "hear" value = "Friend Referral"/>Friend Referral
+               <input type = "radio" name = "hear" value = "Email"/>Email</label>
+
+
+          <br/>
+          <label>
+              Would you like to opt in your email for future discounts and promotions?
+              <input type = "checkbox" name = "promotion" value = "Yes"/> Yes, I want free stuff!
+          </label>
+          <p></p>
+
+          <table border = "1">
+            <caption>What would you like?</caption>
+            <tr>
+              <th>Product</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
+            <tr>
+              <td>Cucumber Rose</td>
+              <td>Used as dish garnish</td>
+              <td>$1.99</td>
+              <td><input type = "text" name = "quantity"/></td>
+            </tr>
+            <tr>
+              <td>Pineapple Hedgehog</td>
+              <td>Small, Medium, or Large</td>
+              <td>$3.99</td>
+              <td><input type = "text" name = "quantity"/></td>
+            </tr>
+            <tr>
+              <td>Customizable Cake</td>
+              <td>Choose color and size(S,M,L)</td>
+              <td>$10.99</td>
+              <td><input type = "text" name = "quantity"/></td>
+            </tr>
+            <tr>
+              <td>Seasonal Frosted Cookies</td>
+              <td>Halloween: Bats or Pumpkins</td>
+              <td>$2.99</td>
+              <td><input type = "text" name = "quantity"/></td>
+            </tr>
+            <tr>
+              <td>Bunny Clam Chowder Bread Bowl</td>
+              <td>New England Clam Chowder(S,M)</td>
+              <td>$6.99</td>
+              <td><input type = "text" name = "quantity"/></td>
+            </tr>
+          </table><br/>
+          <p></p>
+          <label>How would you like to pay?
+          <select name = "Credit Card">
+            <option value = "Visa">Visa</option>
+            <option value = "American Express">American Express</option>
+            <option value = "Wells Fargo">Wells Fargo</option>
+            <option value = "none">None of the above</option>
+          </select>
+        </label>
+
+            <label> Credit Card Number:
+              <input type = "password" name = "pw"/>
+            </label>
+        </fieldset>
+
+        <fieldset>
+          <input type = "reset"/>
+          <input type="submit" value="Send" />
+        </fieldset>
+
+        </form>
+        <br/><br/><br/><br/>
+        <h2>Thanks for visiting!</h2>
+      </div>
+
+       <div id = "footer">
+         <h2>&iota; Contact Us &iota;</h2>
+         <address><i>Justine's&reg; Esthetic Eatery <br/>
+           23423 Hungry Road <br/>
+           Hungry City, CA 12345 <br/><br/>
+           &copy; 2018
+           Justine's&reg; Esthetic Eatery</i></address>
+       </div>
+
+     </div>
+
+     <p>
+       <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" /></a>
+     </p>
+
+     <p>
+       <a href="http://jigsaw.w3.org/css-validator/check/referer">
+       <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+       </a>
+     </p>
+
+   </body>
+</html>
