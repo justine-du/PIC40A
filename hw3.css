@@ -1,0 +1,108 @@
+div.menu {
+	background-color: blue;
+}
+
+div.menu a:hover {
+	background-color: #dfeeff;
+}
+
+div.menu a {
+	display: none;
+	background-color: white;
+}
+
+div.menu:hover a {
+	display: block;
+}
+
+#container {
+	border: 1px solid blue;
+	width: 300px;
+	height: 169px;
+}
+
+#img1 {
+	width: 129px;
+	height: 129px;
+	padding: 20px 0px 20px 18px;
+}
+
+#img2 {
+	width: 129px;
+	height: 129px;
+	padding: 20px 18px 20px 0px;
+}
+
+#container2 {
+	width: 200px;
+}
+
+.red_box {
+	width: 50px;
+	height: 50px;
+	float: left;
+	border: 1px solid black;
+}
+
+.blue_box {
+	width: 50px;
+	height: 50px;
+	float: right;
+	border: 1px solid black;
+}
+
+.red_box:hover {
+	background-color: red;
+}
+
+.blue_box:hover {
+	background-color: blue;
+}
+
+h1 {
+	font-family: 'Montserrat';
+	font-weight: bold;
+	color: darkblue;
+}
+
+button {
+	border-radius: 30px;
+	color: white;
+	background-color: #7B53EB;
+	width: 40px;
+	height: 40px;
+	margin: 3px;
+	font-size: 15pt;
+	border: 1px solid white;
+}
+
+button:hover 
+{
+	background-color: #DAA5F9;
+	color: black;
+}
+
+#calculator {
+	border: 2px solid darkblue;
+	padding: 20px;
+	background-color: #F8DDD8;
+	border-radius: 10px;
+	width: 206px;
+}
+
+#display {
+	width: 180px;
+}
+
+.ops {
+	background-color: #A8E5F2;
+	color: black;
+}
+
+
+
+
+
+
+
+

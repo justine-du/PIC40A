@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+      <title>JavaScript HW3</title>
+      <link href = "hw3.css" rel = "stylesheet" style = "text/css"/>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      <script type="text/javascript">
+      <!--
+
+      //This is the function I am providing for you.  It takes as argument a string or a number and displays it in the box in the window
+
+      function init() 
+      {
+        num1 = ""; // current
+        num2 = ""; // first 
+        tempNum = "";
+        resultNum = "";
+        operation = "";
+        enterNum1 = true;
+        enterNum2 = false;
+        pressEquals = false;
+      }
+
+      function display(num)
+      {
+        var node = document.getElementById("display");
+        node.value=num;
+      }
+
+      function setNum(num) //set num1
+      {
+        if (num == 11) //displaying decimal pt.
+          num = ".";
+        num1 += num.toString();
+        display(num1);
+      }
+
+      function changeNum(num_op) //update num1
+      {
+        num2 = num1;
+        num1 = "";
+
+        if (num_op == 100) 
+        {
+          operation = "/";
+        }
+        else if (num_op == 200) 
+        {
+          operation = "*";
+        }
+        else if (num_op == 300) 
+        {
+          operation = "-";
+        }
+        else 
+        {
+          operation = "+";
+        }
+      }
+
+      function equals() 
+      {
+        num1 = Number(num1);
+        num2 = Number(num2);
+
+        if (operation == "/") //performing operation
+          resultNum = num2 / num1;
+        else if (operation == "*")
+          resultNum = num2 * num1;
+        else if (operation == "-")
+          resultNum = num2 - num1;
+        else if (operation == "+")
+          resultNum = num2 + num1;
+        else 
+          resultNum = num1;
+
+        display(resultNum);
+      }
+
+      // `Add whatever JS you want here //-->
+
+      </script>
+
+  </head>
+
+  <body onload = "init()">
+
+    <h1>SIMPLE CALCULATOR</h1>
+
+    <!--This is the text box where numbers will be displayed.  Call the display function to show a number here -->
+    <div id = "calculator">
+      <form action="" method="get">
+      <p>
+        <input type="text" id="display"/>
+      </p>
+      </form>
+        <div>
+          <form action="" method="get">
+
+          <!--Your calculator buttons go here. Note there is no submit buttons at all --'-->
+            <button type = "button" onclick = "setNum(7)">7</button>
+            <button type = "button" onclick = "setNum(8)">8</button>
+            <button type = "button" onclick = "setNum(9)">9</button>
+            <button type = "button" id = "divide" class = "ops" onclick = "changeNum(100)">/</button><br/>
+
+            <button type = "button" onclick = "setNum(4)">4</button>
+            <button type = "button" onclick = "setNum(5)">5</button>
+            <button type = "button" onclick = "setNum(6)">6</button>
+            <button type = "button" id = "multiply" class  = "ops" onclick = "changeNum(200)">*</button><br/>
+
+            <button type = "button" onclick = "setNum(1)">1</button>
+            <button type = "button" onclick = "setNum(2)">2</button>
+            <button type = "button" onclick = "setNum(3)">3</button>
+            <button type = "button" id = "subtract" class = "ops" onclick = "changeNum(300)">-</button><br/>
+
+            <button type = "button" onclick = "setNum(11)">.</button>
+            <button type = "button" onclick = "setNum(0)">0</button>
+            <button type = "button" onclick = "equals()">=</button>
+            <button type = "button" id = "add" class = "ops" onclick = "changeNum(400)">+</button><br/>
+
+          </form>
+        </div>
+    </div>
+    <p>
+     <a href="http://validator.w3.org/check?uri=referer"><img
+     src="http://www.w3.org/Icons/valid-xhtml11"
+     alt="Valid XHTML 1.1" height="31" width="88" /></a>
+    </p>
+
+
+  </body>
+
+</html>
