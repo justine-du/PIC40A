@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<title>Ajax</title>
+
+<style type="text/css">
+
+#yes	{
+width:100px;
+height: 20px;
+border: solid black 1px;
+background-color:blue;
+margin: 20px;
+		}
+
+#no	{
+width:100px;
+height: 20px;
+border: solid black 1px;
+background-color:red; 
+margin: 20px;
+}
+
+#container {
+margin-top: 50px;
+width:400px;
+height: 300px;
+margin: 20px;
+}
+
+
+
+</style>
+
+<script type="text/javascript">
+
+		
+		function process_form()
+		{
+		
+			// You should fill in the details here
+
+			yesNode = document.getElementById("yes_check");
+			noNode = document.getElementById("no_check");
+
+			if (yesNode.checked)
+				query_string = "vote=yes";
+			else // no is checked
+				query_string = "vote=no";
+		
+			do_ajax_stuff(query_string);
+		}
+		
+		function do_ajax_stuff(query_string) 
+		{
+			var xhr = new XMLHttpRequest();
+
+			xhr.onreadystatechange = function () 
+			{
+
+				if (xhr.readyState == 4 && xhr.status == 200) 
+				{
+					var result = xhr.responseText; // responseText = #yes,#no
+					display_result(result); // You will need to write this function
+					
+				}
+			}	
+  
+			alert("query string is: " + query_string);
+			xhr.open("GET", "http://pic.ucla.edu/~justinedu/vote.php?" + query_string,true);  // you will need to edit this line for your pic account
+			xhr.send(null);
+		}
+
+		function display_result(result)
+		{
+			var answerArray = result.split(",");
+			var numYes = parseInt(answerArray[0]);
+			var numNo = parseInt(answerArray[1]);
+
+			var divYesNode = document.getElementById("yes");
+			var divNoNode = document.getElementById("no");
+
+			divYesNode.innerHTML = "Yes: " + numYes;
+			divNoNode.innerHTML = "No: " + numNo;
+
+			var yesWidth = 200 * (numYes / (numYes + numNo));
+			var noWidth = 200 * (numNo / (numYes + numNo));
+
+			divYesNode.style.width = yesWidth + "px";
+			divNoNode.style.width = noWidth + "px";
+		}
+
+
+</script>
+
+
+</head>
+
+
+<body onload="init()">
+<h2>Vote on the question: Is Futurama the best show of all time?</h2>
+
+        <fieldset>
+
+                <form action="#" method="get">
+					<p>
+                        Yes <input type="radio" name="vote" value="yes" id="yes_check" /><br/>
+                        No  <input type="radio" name="vote"  value="no" id="no_check" /><br/>
+                        <input type="button" value="Submit" onclick="process_form()"/>
+					</p>
+                </form>
+         </fieldset>
+				
+	<h1>Results</h1>
+	<div id="container">			
+		<div id="yes" class="yes">Yes:</div>
+		<div id="no">No:</div>
+	</div>			
+</body>
+</html>
