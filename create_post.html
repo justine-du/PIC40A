@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<link rel="stylesheet" type="text/css" href="create_post.css" />
+<!-- Style guide: https://dribbble.com/shots/4662037-Hello-Dribbble -->
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=PT Serif' rel='stylesheet'>
+
+<title>Let's Debate!</title>
+
+<script type="text/javascript">
+<!--
+	document.cookie = "color=notset";
+	function init() 
+	{
+		textareaNode = document.getElementById("textarea");
+		textarea.innerHTML = "'F.R.I.E.N.D.S. is my favorite TV show series because I love David Schwimmer!'";
+		textareaNode.onclick = function()
+		{
+		textareaNode.innerHTML = "";
+		}
+
+		var cookieArr = document.cookie.split(";");
+		for (var i = 0; i < cookieArr.length; i++)
+		{
+		if (cookieArr[i].split("=")[1] == "notset")
+		{
+		color = prompt("What color would you like the forum background to be? Choose a LIGHT color to make the site easy to read!");
+		document.cookie = "color=" + color;
+		bodyNode = document.getElementsByTagName("body")[0];
+		bodyNode.style.backgroundColor = color;
+		}
+		}
+
+		for (var i = 0; i < cookieArr.length; i++)
+		{
+		currCookie = cookieArr[i];
+		if (currCookie[0] != "c")
+		continue;
+		colorVal = currCookie.split("=")[1];
+		bodyNode = document.getElementsByTagName("body")[0];
+		bodyNode.style.backgroundColor = colorVal;
+		}
+	}
+
+	function textinbox()
+	{
+		var inputNode = document.getElementsByTagName("input");
+		if (inputNode[1].checked)
+			textareaNode.innerHTML = "'F.R.I.E.N.D.S. is my favorite TV show series because I love David Schwimmer!'";
+		else if (inputNode[2].checked)
+			textareaNode.innerHTML = "'Tell me your worst dad joke'";
+		else if (inputNode[3].checked)
+			textareaNode.innerHTML = "'Thoughts on Donald Trump?'";
+		else if (inputNode[4].checked)
+			textareaNode.innerHTML = "'Which is better: the Google Pixel or iPhoneX?'";
+		else if (inputNode[5].checked)
+			textareaNode.innerHTML = "'I need advice for my long distance relationship!'";
+	}
+
+//-->
+</script>
+
+</head>
+
+
+<body onload = "init()">
+
+	<h1>Your Personal Forum</h1>
+	<p>We know life gets boring sometimes, so we created a place for you to freely roast people as you please!</p>
+
+	<h2>What would you like to talk about?</h2>
+
+	<form method="post" action="add_topic.php">
+		<fieldset>
+
+		<legend>Fill in the Form</legend>
+
+		<br/>
+		<label>Name</label>
+		<input type = "text" id = "name" name = "person"/>
+
+		<br/><br/>
+		<label>Topic</label>
+
+	    <input type="radio" name="topic" value="entertainment" checked="checked" onclick = "textinbox()"/>Entertainment
+	    <input type="radio" name="topic" value="funny" onclick = "textinbox()"/>Funny
+	    <input type="radio" name="topic" value="news" onclick = "textinbox()"/>News
+	    <input type="radio" name="topic" value="technology" onclick = "textinbox()"/>Technology
+	    <input type="radio" name="topic" value="personal" onclick = "textinbox()"/>Personal
+	    <br/><br/>
+
+	    <label>Post Your Roast!</label>
+	    <br/>
+
+	    <textarea id = "textarea" name = "message" rows = 8 cols = 40 wrap = virtual></textarea>
+
+	    <br/>
+
+	    <input type="submit" value="Add to the forum"/>
+
+		</fieldset>
+
+	</form>
+
+
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+body {
+	background-color: #CDE0EA;
+}
+
+h1, h2 {
+	font-family: 'Montserrat';
+	color: #20624C;
+	text-align: center;
+}
+
+p {
+	font-family: 'PT Serif';
+	text-align: center;
+	font-style: italic;
+}
+
+#input {
+	background-color: 'white';
+}
+
+fieldset {
+	border: 2px dotted #20624C;
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+label,legend {
+	font-weight: bold;
+}
+
+.text {
+	margin: auto;
+}

@@ -1,0 +1,72 @@
+body {
+	background-color: #CDE0EA;
+}
+
+h1, h2 {
+	font-family: 'Montserrat';
+	color: #20624C;
+	text-align: center;
+}
+
+p {
+	font-family: 'Montserrat';
+	text-align: center;
+	font-style: italic;
+}
+
+fieldset {
+	border: 2px dotted #20624C;
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+#none {
+	text-align: center;
+	width: 500px;
+	margin: auto;
+	border: none;
+}
+
+table {
+	margin: auto;
+}
+
+td {
+	font-family: 'PT Serif';
+}
+
+strong {
+	font-size: 18pt;
+}
+
+th {
+	font-size: 20pt;
+	font-family: 'Montserrat';
+}
+
+span {
+	color: black;
+	font-size: 30pt;
+}
+
+.comment_div {
+	border: 2px dotted #20624C;
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+#name, .time {
+	font-weight: bold;
+	color: blue;
+}
+
+#posted_by {
+	color: black;
+	font-size: 16pt;
+}
+
+#comment, #username {
+	width: 500px;
+}

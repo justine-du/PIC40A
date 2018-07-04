@@ -1,0 +1,16 @@
+Justine Du
+Personal Forum
+Abstract
+For my final project, I decided to create a forum where users of any age and interests could come to my website and post whatever they wanted to. Starting with the home page, my web app asks the user to set a background color for the main page using document cookie interactions. Then the user is able to select a topic category they desire, fill in their name, and post their thoughts on that topic. Using DOM and a lot of Javascript, upon loading the page, I have pre-filled out the text fields and textarea. Using the onclick event, the pre-filled text disappears, and the user is free to type whatever they want into the textbox to be sent into the SQLITE3 database. After adding the post to the forum, the user is directed to a “Current Topics” page where they can select on the post they just posted or another person’s post where they can add unique comments or replies if they don’t agree with someone else’s views. After they click on the specific post by another person, they are free to post any reply they want. Using Ajax, a user can post a comment and the comment will pop up real-time. After refreshing, the user can see all the comments in another CSS styling that makes each user’s names more distinctly. After posting a reply or comment, the user can choose to create another post by clicking the “Click Here!” at the bottom of the page.
+
+
+Grade Hoping to Receive - A Grade
+        My web app satisfies all the basic requirements - using two external CSS stylesheets to make the website look pleasing; I chose the simplicity route and made all PHP pages look consistent with a blue/green theme. My app also uses a lot of Javascript and DOM methods to change the site dynamically, uses cookies to set the home page’s background color, and events to add sample “names” and “posts” that a user can post to the forum. Aside from the main HTML page, I have 5 separate PHP files extensively using SQLITE3 and timestamps to continuously retrieve and display contents from the database onto the site. Using Ajax, the user can post comments onto the “Replies” page without having to refresh the page. 
+
+
+Improvements
+* On the “Current Topics” page, I could add another column where the table would display “# of Replies” for each particular topic.
+Bugs
+* If another user was viewing the same page as another person, they would have to refresh the page to see the new comment added.
+
+Link to project: http://pic.ucla.edu/~justinedu/final_project/create_post.html
